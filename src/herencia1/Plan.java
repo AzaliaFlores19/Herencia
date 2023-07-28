@@ -10,12 +10,16 @@ package herencia1;
  */
 public abstract class Plan {
     
-    private int numero;
+    private int numero, minutos, mensajes;
     private String nombre;
     
-     public Plan(int numero, String nombre) {
+     public Plan(int numero, String nombre, int minutos, int mensajes) {
         this.numero=numero;
         this.nombre=nombre;
+        this.minutos=minutos;
+        this.mensajes=mensajes;
+        
+        
      }
      
       public int getnumero(){
@@ -25,6 +29,17 @@ public abstract class Plan {
      public String getnombre() {
         return nombre;
     }
+     
+      public int  getminutos() {
+        return minutos;
+    }
+      
+       public int getmensajes() {
+        return mensajes;
+    }
+       
+     
+     
      
     public abstract double pagoMensual(int minutos,int mensajes);
     
