@@ -28,11 +28,11 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnAgregarPlan = new javax.swing.JButton();
+        btnPagoPlan = new javax.swing.JButton();
+        btnAgregarAmigo = new javax.swing.JButton();
+        btnListar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,25 +42,50 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
         jLabel1.setText("Menu");
 
-        jButton1.setBackground(new java.awt.Color(153, 153, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jButton1.setText("Agregar Plan");
+        btnAgregarPlan.setBackground(new java.awt.Color(153, 153, 0));
+        btnAgregarPlan.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        btnAgregarPlan.setText("Agregar Plan");
+        btnAgregarPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarPlanActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(153, 153, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jButton2.setText("Pago Plan");
+        btnPagoPlan.setBackground(new java.awt.Color(153, 153, 0));
+        btnPagoPlan.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        btnPagoPlan.setText("Pago Plan");
+        btnPagoPlan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagoPlanActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(153, 153, 0));
-        jButton3.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jButton3.setText("Agregar Amigo ");
+        btnAgregarAmigo.setBackground(new java.awt.Color(153, 153, 0));
+        btnAgregarAmigo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        btnAgregarAmigo.setText("Agregar Amigo ");
+        btnAgregarAmigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarAmigoActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(153, 153, 0));
-        jButton4.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jButton4.setText("Listar");
+        btnListar.setBackground(new java.awt.Color(153, 153, 0));
+        btnListar.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        btnListar.setText("Listar");
+        btnListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarActionPerformed(evt);
+            }
+        });
 
-        jButton5.setBackground(new java.awt.Color(153, 153, 0));
-        jButton5.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jButton5.setText("Salir");
+        btnSalir.setBackground(new java.awt.Color(153, 153, 0));
+        btnSalir.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,40 +95,40 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(118, 118, 118)
-                        .addComponent(jButton1))
+                        .addComponent(btnAgregarPlan))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(130, 130, 130)
-                        .addComponent(jButton2))
+                        .addComponent(btnPagoPlan))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(jButton3))
+                        .addComponent(btnAgregarAmigo))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addComponent(jButton4))
+                        .addComponent(btnListar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addComponent(jButton5)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addComponent(btnSalir)))
+                .addContainerGap(88, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(142, 142, 142))
+                .addGap(120, 120, 120))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(jButton1)
+                .addGap(28, 28, 28)
+                .addComponent(btnAgregarPlan)
                 .addGap(26, 26, 26)
-                .addComponent(jButton2)
+                .addComponent(btnPagoPlan)
                 .addGap(27, 27, 27)
-                .addComponent(jButton3)
+                .addComponent(btnAgregarAmigo)
                 .addGap(27, 27, 27)
-                .addComponent(jButton4)
+                .addComponent(btnListar)
                 .addGap(27, 27, 27)
-                .addComponent(jButton5)
+                .addComponent(btnSalir)
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
@@ -111,17 +136,40 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarPlanActionPerformed
+
+    private void btnPagoPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagoPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPagoPlanActionPerformed
+
+    private void btnAgregarAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAmigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarAmigoActionPerformed
+
+    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnListarActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,11 +207,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnAgregarAmigo;
+    private javax.swing.JButton btnAgregarPlan;
+    private javax.swing.JButton btnListar;
+    private javax.swing.JButton btnPagoPlan;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
