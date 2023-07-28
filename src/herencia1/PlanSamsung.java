@@ -11,7 +11,7 @@ public abstract class PlanSamsung extends Plan {
     
     //Atributos
     public String Pin,pinamig;
- ArrayList<Plan>bbm;
+ ArrayList<String>bbm;
     public String email;
 
 
@@ -35,26 +35,21 @@ int minConsumidos = this.getminutos();
 int menConsumidos = this.getmensajes() ;
 
 // Cálculo de minutos adicionales
-int minAdicionales;
+int minAdicionales,menAdicionales;
 if (minConsumidos > mingratis) {
     minAdicionales = minConsumidos - mingratis;
 } else {
     minAdicionales = 0;
 }
-
 // Cálculo de mensajes adicionales
-int menAdicionales;
 if (menConsumidos > msgsgratis) {
     menAdicionales = menConsumidos - msgsgratis;
 } else {
     menAdicionales = 0;
-}      
-      
+}        
  totalMinutos = costoMinAd * mingratis;
  totalMensajes = costoMsgAd * menAdicionales;
-      
-        
-        
+       
   return cobro + totalMinutos + totalMensajes;
       
     }
@@ -65,7 +60,7 @@ public void agregarPinAmigo(String pinamig) {
     for(int i=0;i<bbm.size();i++){
     if (bbm.get(i).equals(pinamig)) {
         
-        //bbm.add(pinamig);
+        bbm.add(pinamig);
          
         }
     }
@@ -73,6 +68,10 @@ public void agregarPinAmigo(String pinamig) {
     
      public String getEmail() {
         return email;
+    }
+    
+     public String getPin() {
+        return Pin;
     }
       
 }
