@@ -66,7 +66,7 @@ public class Tigo {
             return;
         }
 
-        ListaPlanes.add(plan);
+        ListaPlanes.add(plan));
         
          
      }
