@@ -8,6 +8,8 @@ import java.util.ArrayList;
  * @author Azalia
  */
 public class Tigo {
+    PlanSamsung samsung;
+    PlanIPhone Iphone;
     
     public int numeroTel;
     public String nombre;
@@ -39,7 +41,7 @@ public class Tigo {
     * **/
 
      //busqueda
-     boolean busqueda(int numeroTel, String datoExtra, String tipo){
+    public boolean busqueda(int numeroTel, String datoExtra, String tipo){
           Plan planDado=buscarPlan(numeroTel);
           if(planDado!=null){
               return true;
@@ -48,12 +50,40 @@ public class Tigo {
      }
      
      
-     void agregarPlan(int numeroTel,String nombre,String tipo){
-         if(busqueda(numeroTel,"",tipo)==false){
-             
-         }
+     /**public void agregarPlan(int numerotel, String nombre, String extra, String tipo){
+          if (buscarPlan(numeroTel) != null) {
+            System.out.println("Error: El número telefónico o el dato extra ya existen.");
+            return;
+        }
+
+        Plan plan;
+        if (tipo.equals("IPHONE")) {
+            plan = new PlanIPhone(numeroTel,nombre,extra);
+        } else if (tipo.equals("SAMSUNG")) {
+            plan = new PlanSamsung(numeroTel, nombre, extra);
+        } else {
+            System.out.println("Error: Tipo de plan inválido.");
+            return;
+        }
+
+        ListaPlanes.add(plan);
+        
+         
      }
+     * **/
+     
+     public double pagoPlan(int numeroTel, int mins, int msgs) {
+        Plan plan = buscarPlan(numeroTel);
+        if (plan != null) {
+            return plan.pagoMensual(mins, msgs);
+        } else {
+            System.out.println("El número telefónico no está registrado.");
+            return 0.0;
+        }
+    }
+
      
      
     
 }
+
