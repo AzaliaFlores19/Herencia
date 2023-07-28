@@ -65,7 +65,10 @@ public void agregarPinAmigo(String pinamig) {
         }
     }
 }
-    
+     public void imprimir() {
+        super.imprimir();
+        System.out.println("Pin: " + Pin);
+    }
      public String getEmail() {
         return email;
     }
