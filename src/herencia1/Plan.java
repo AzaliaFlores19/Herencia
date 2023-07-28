@@ -38,9 +38,8 @@ public abstract class Plan {
         return mensajes;
     }
        
-     
-     
-     
+    public abstract void getTipo();
+
     public abstract double pagoMensual(int minutos,int mensajes);
     
     void imprimir (){
