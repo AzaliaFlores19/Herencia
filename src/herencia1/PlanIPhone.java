@@ -7,25 +7,26 @@ package herencia1;
  */
 public abstract class PlanIPhone extends Plan  {
     
- private static Plan PlanesIphone[];
- private static int count;
  private String email;
- Plan plan;
- private int pago;
- 
  
 public PlanIPhone (int numero, String nombre,int minutos, int mensajes, String email){
     super(numero, nombre,minutos, mensajes);
     this.email=email;
-     PlanesIphone = new Plan[100];
-     count = 0;
+     
 }
 
-public void PagoMensual (int minutos, int mensajes){
+public double PagoMensual (int minutos, int mensajes){
+    double PagoMensual = 22+(0.4 * minutos) +(0.1*mensajes);
+    return PagoMensual;   
+}
+
+public void print(){
+        super.imprimir();
+        System.out.println("Email: "+email);
+    }
     
-    pago=(int) (22+(minutos*0.4)+(mensajes*0.1));   
-}
-
-
+    public String getEmail(){
+        return email;
+    }
  
 }
